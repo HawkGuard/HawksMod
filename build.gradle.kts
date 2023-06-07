@@ -8,7 +8,8 @@ plugins {
 
 //Constants:
 
-val baseGroup: String by project
+//val baseGroup: String by project
+val baseGroup = "io.github.HawkGuard.Hawk"
 val mcVersion: String by project
 val version: String by project
 val mixinGroup = "$baseGroup.mixin"

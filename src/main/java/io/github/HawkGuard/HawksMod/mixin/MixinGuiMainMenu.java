@@ -1,4 +1,4 @@
-package com.example.mixin;
+package io.github.HawkGuard.HawksMod.mixin;
 
 import net.minecraft.client.gui.GuiMainMenu;
 import org.spongepowered.asm.mixin.Mixin;

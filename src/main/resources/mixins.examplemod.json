@@ -1,11 +1,11 @@
 {
-  "package": "com.example.mixin",
+  "package": "com.hawksmod.mixin",
   "refmap": "mixins.examplemod.refmap.json",
   "minVersion": "0.7",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
-	"MixinGuiMainMenu"
+    "io.github.HawkGuard.HawksMod.mixin.MixinGuiMainMenu"
   ]
 }
