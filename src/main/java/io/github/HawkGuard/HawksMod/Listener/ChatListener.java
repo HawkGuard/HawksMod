@@ -1,5 +1,7 @@
 package io.github.HawkGuard.HawksMod.Listener;
 
+import io.github.HawkGuard.HawksMod.HawksMod;
+import io.github.HawkGuard.HawksMod.Overlays.Overlay;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,10 +15,12 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import java.util.ArrayList;
 
 public class ChatListener {
+
     public ChatListener(){
 
     }
 
+    // TEST
     @SubscribeEvent
     public void sendChat(PlayerEvent.PlayerLoggedInEvent event){
         event.player.addChatMessage(new ChatComponentText("» Slay 6,000 Combat XP worth of Zombies."));
@@ -25,28 +29,16 @@ public class ChatListener {
         //System.out.println("AWIHAGOGHW)GOH");
     }
 
+    // TEST
     @SubscribeEvent
     public void test(PlayerEvent.ItemPickupEvent event){
-        event.player.addChatMessage(new ChatComponentText("» Slay 6,000 Combat XP worth of Zombies."));
-        //Minecraft.getMinecraft().thePlayer.sendChatMessage("» Slay 6,000 Combat XP worth of Zombies.");
-
+        event.player.addChatMessage(new ChatComponentText("» Slay 6,000 Combat XP worth of Spiders."));
     }
-
-    @SubscribeEvent
-    public void sendChat2(PlayerEvent.PlayerChangedDimensionEvent event){
-        event.player.addChatMessage(new ChatComponentText("» Slay 6,000 Combat XP worth of Zombies."));
-        Minecraft.getMinecraft().thePlayer.sendChatMessage("» Slay 6,000 Combat XP worth of Zombies.");
-    }
-
 
     @SubscribeEvent
     public void getChat(ClientChatReceivedEvent event){
         final String MATCH_SLAY = "Slay";
-        String message = String.valueOf(event.message.getFormattedText()); //.replace(".", "");
-        //System.out.println(event);
-        //System.out.println(message);
-        //System.out.println(event.);
-        System.out.println(event.message.getFormattedText());
+        String message = String.valueOf(event.message.getFormattedText());
         if (message.contains(MATCH_SLAY)){
             getSlayerType(message);
         }
@@ -68,6 +60,7 @@ public class ChatListener {
 
         if (index != -1){
             if (textTab[index].equals(slayerType.get(0))){
+                HawksMod.overlay.setText("Zombie\nRevenant Viscera");
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("Zombie");
             } else if (textTab[index].equals(slayerType.get(1))) {
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("Spider");
