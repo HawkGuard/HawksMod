@@ -56,7 +56,7 @@ public class ChatListener {
 
         if (index != -1){
             if (textTab[index].equals(slayerType.get(0))){
-                HawksMod.slayerOverlay.setText(SlayerUtils.getRevenantLoot());
+                HawksMod.slayerOverlay.setText("Spider");
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("Zombie");
             } else if (textTab[index].equals(slayerType.get(1))) {
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("Spider");

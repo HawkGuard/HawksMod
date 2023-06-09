@@ -14,7 +14,7 @@ public class SlayerOverlay extends Overlay{
     @Override
     public void render() {
         switch (text){
-            case "Revenant Horror" : {
+            case "Spider" : {
                 FontRenderer fRender = minecraft.fontRendererObj;
                 fRender.drawString(EnumChatFormatting.RED + text, 5, 5, 0);
                 drawLootTable(fRender, SlayerUtils.getRevenantLoot());
@@ -25,7 +25,7 @@ public class SlayerOverlay extends Overlay{
     private void drawLootTable(FontRenderer fRender, String lootTable){
         int index = 6;
         for (String line : lootTable.split("\n")){
-            fRender.drawString(EnumChatFormatting.RED + line, 5, index, 0);
+            fRender.drawString(EnumChatFormatting.RED + line, 5, index += fRender.FONT_HEIGHT, 0);
             index++;
         }
     }
