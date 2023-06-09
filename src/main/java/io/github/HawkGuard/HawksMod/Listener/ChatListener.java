@@ -56,18 +56,18 @@ public class ChatListener {
 
         if (index != -1){
             if (textTab[index].equals(slayerType.get(0))){
-                HawksMod.slayerOverlay.setText("Spider");
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("Zombie");
+                HawksMod.slayerOverlay.setText("Revenant Horror");
+                HawksMod.slayerOverlay.setTier(SlayerUtils.getRevenantTier(getXp(textTab)));
             } else if (textTab[index].equals(slayerType.get(1))) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("Spider");
+                HawksMod.slayerOverlay.setText("Tarantula Broodfather");
             } else if (textTab[index].equals(slayerType.get(2))) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("Wolf");
+                HawksMod.slayerOverlay.setText("Sven Packmaster");
             } else if (textTab[index].equals(slayerType.get(3))) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("Enderman");
+                HawksMod.slayerOverlay.setText("Voidgloom Seraph");
             } else if (textTab[index].equals(slayerType.get(4))) {
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("Blazes");
+                HawksMod.slayerOverlay.setText("Inferno Demonlord");
             }else
-                Minecraft.getMinecraft().thePlayer.sendChatMessage("Rien");
+                Minecraft.getMinecraft().thePlayer.sendChatMessage("Slayer not found");
         }
 
     }
@@ -79,6 +79,24 @@ public class ChatListener {
             }
         }
         return -1;
+    }
+
+    private int findXp(String[] tab){
+        for (int i = 0; i < tab.length; i++){
+            if (tab[i].equals("Slay")){
+                return i + 1;
+            }
+        }
+        return -1;
+    }
+
+    private String getXp(String[] tab){
+        String xp;
+        if (findXp(tab) != -1){
+            xp = tab[findXp(tab)];
+            return xp;
+        }
+        return "Null";
     }
 
 

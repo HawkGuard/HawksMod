@@ -1,6 +1,8 @@
 package io.github.HawkGuard.HawksMod.Utils;
 
 
+import java.util.HashMap;
+
 public class SlayerUtils {
     public SlayerUtils(){
 
@@ -113,6 +115,26 @@ public class SlayerUtils {
                 "Subzero Inverter";
 
         return lootTable;
+    }
+
+    /**
+     * Get the tier of the spawned boss
+     * @param xpNeeded String of the xp said in chat
+     * @return String with the tier, says Tier not found if the xpNeeded isn't found in the HashMap
+     */
+    public static String getRevenantTier(String xpNeeded){
+        HashMap<String, String> revTier = new HashMap<>();
+        revTier.put("150", "Tier: 1");
+        revTier.put("1,440", "Tier: 2");
+        revTier.put("2,400", "Tier: 3");
+        revTier.put("4,800", "Tier: 4");
+        revTier.put("6,000", "Tier: 5");
+
+        return revTier.getOrDefault(xpNeeded, "Tier not found");
+    }
+
+    public void getXpLeft(String xpLeft, String xpGet){
+        int xp;
     }
 
 }
