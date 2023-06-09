@@ -10,7 +10,7 @@ public class SlayerUtils {
      * Get the revenant horror loot table
      * @return String lootable
      */
-    public String getRevenantLoot(){
+    public static String getRevenantLoot(){
         String lootTable;
 
         lootTable = "Revenant Flesh" +
@@ -30,7 +30,7 @@ public class SlayerUtils {
         return lootTable;
     }
 
-    public String getSpiderLoot(){
+    public static String getSpiderLoot(){
         String lootTable;
 
         lootTable = "Tarantula Web" +
@@ -45,7 +45,7 @@ public class SlayerUtils {
         return lootTable;
     }
 
-    public String getWolfLoot(){
+    public static String getWolfLoot(){
         String lootTable;
 
         lootTable = "Wolf Tooth" +
@@ -61,7 +61,7 @@ public class SlayerUtils {
         return lootTable;
     }
 
-    public String getEndermanLoot(){
+    public static String getEndermanLoot(){
         String lootTable;
 
         lootTable = "Null Sphere" +
@@ -87,7 +87,7 @@ public class SlayerUtils {
         return lootTable;
     }
 
-    public String getBlazeLoot(){
+    public static String getBlazeLoot(){
         String lootTable;
 
         lootTable = "Delerict Ashe" +
