@@ -22,10 +22,10 @@ public class SlayerOverlay extends Overlay{
                 FontRenderer fRender = minecraft.fontRendererObj;
 
                 GlStateManager.pushMatrix();
-                GlStateManager.scale(1f, 1f, 0f);
+                GlStateManager.scale(0.5f, 0.5f, 0f);
 
                 fRender.drawString(EnumChatFormatting.RED + text, 5, 5, 0);
-                fRender.drawString(EnumChatFormatting.RED + tier, 5, 6, 0);
+                fRender.drawString(EnumChatFormatting.RED + tier, 5, 6 + fRender.FONT_HEIGHT, 0);
                 GlStateManager.popMatrix();
 
                 drawLootTable(fRender, SlayerUtils.getRevenantLoot());
@@ -34,17 +34,20 @@ public class SlayerOverlay extends Overlay{
     }
 
     private void drawLootTable(FontRenderer fRender, String lootTable){
-        int index = 7;
+        int index = 7 + fRender.FONT_HEIGHT;
 
-        GlStateManager.pushMatrix();
-        GlStateManager.scale(1f, 1f, 0f);
+
 
         for (String line : lootTable.split("\n")){
+            GlStateManager.pushMatrix();
+            GlStateManager.scale(0.5f, 0.5f, 0f);
             fRender.drawString(EnumChatFormatting.RED + line, 5, index += fRender.FONT_HEIGHT, 0);
+            GlStateManager.popMatrix();
             index++;
+
         }
 
-        GlStateManager.popMatrix();
+
     }
 
     public void setTier(String tier){
