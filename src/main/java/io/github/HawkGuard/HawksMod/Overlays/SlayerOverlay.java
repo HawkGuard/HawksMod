@@ -1,12 +1,9 @@
 package io.github.HawkGuard.HawksMod.Overlays;
 
-import io.github.HawkGuard.HawksMod.Utils.SlayerUtils;
-import net.minecraft.client.Minecraft;
+import io.github.HawkGuard.HawksMod.Utils.Slayer.SlayerUtils;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.EnumChatFormatting;
-
-import java.util.jar.Attributes;
 
 public class SlayerOverlay extends Overlay{
     private String tier;

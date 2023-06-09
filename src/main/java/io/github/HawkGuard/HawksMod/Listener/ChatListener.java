@@ -1,7 +1,7 @@
 package io.github.HawkGuard.HawksMod.Listener;
 
 import io.github.HawkGuard.HawksMod.HawksMod;
-import io.github.HawkGuard.HawksMod.Utils.SlayerUtils;
+import io.github.HawkGuard.HawksMod.Utils.Slayer.SlayerUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;

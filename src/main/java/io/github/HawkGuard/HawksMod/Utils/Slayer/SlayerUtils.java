@@ -1,11 +1,21 @@
-package io.github.HawkGuard.HawksMod.Utils;
+package io.github.HawkGuard.HawksMod.Utils.Slayer;
+
+
+
+import org.json.JSONObject;
 
 
 import java.util.HashMap;
 
-public class SlayerUtils {
-    public SlayerUtils(){
+public abstract class SlayerUtils {
+    public String tier;
+    public HashMap<String, Integer> lootTableMap;
 
+    public JSONObject obj;
+    public SlayerUtils(){
+        this.tier = "Tier not found";
+        this.lootTableMap = new HashMap<>();
+        this.obj = new JSONObject();
     }
 
     /**
@@ -133,8 +143,20 @@ public class SlayerUtils {
         return revTier.getOrDefault(xpNeeded, "Tier not found");
     }
 
+    public abstract JSONObject getJSON();
+
+    public abstract void setObj();
+
     public void getXpLeft(String xpLeft, String xpGet){
         int xp;
     }
+
+    public abstract void setLootTableMap();
+
+    public abstract HashMap<String, Integer> getLootTableMap();
+
+    public abstract void addDrop(String drop);
+
+
 
 }
