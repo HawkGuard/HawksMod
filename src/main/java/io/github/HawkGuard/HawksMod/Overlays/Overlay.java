@@ -23,6 +23,12 @@ public abstract class Overlay {
         if (event.isCancelable() || event.type != RenderGameOverlayEvent.ElementType.EXPERIENCE){
             return;
         }
+        render();
+        //FontRenderer fRender = Minecraft.getMinecraft().fontRendererObj;
+        //fRender.drawString(EnumChatFormatting.RED + text, 5, 5, 0);
+    }
+
+    private void render(){
         FontRenderer fRender = Minecraft.getMinecraft().fontRendererObj;
         fRender.drawString(EnumChatFormatting.RED + text, 5, 5, 0);
     }
