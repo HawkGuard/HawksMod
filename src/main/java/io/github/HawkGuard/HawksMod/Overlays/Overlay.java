@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL14;
 
-public class Overlay {
+public abstract class Overlay {
     int height = Minecraft.getMinecraft().displayHeight;
     int width = Minecraft.getMinecraft().displayWidth;
     private String text;

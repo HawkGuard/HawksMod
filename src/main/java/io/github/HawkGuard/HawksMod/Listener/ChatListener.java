@@ -1,14 +1,9 @@
 package io.github.HawkGuard.HawksMod.Listener;
 
 import io.github.HawkGuard.HawksMod.HawksMod;
-import io.github.HawkGuard.HawksMod.Overlays.Overlay;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.IChatComponent;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
@@ -60,7 +55,7 @@ public class ChatListener {
 
         if (index != -1){
             if (textTab[index].equals(slayerType.get(0))){
-                HawksMod.overlay.setText("Zombie\nRevenant Viscera");
+                HawksMod.slayerOverlay.setText("Zombie\nRevenant Viscera");
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("Zombie");
             } else if (textTab[index].equals(slayerType.get(1))) {
                 Minecraft.getMinecraft().thePlayer.sendChatMessage("Spider");

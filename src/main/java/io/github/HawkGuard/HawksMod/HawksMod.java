@@ -2,6 +2,7 @@ package io.github.HawkGuard.HawksMod;
 
 import io.github.HawkGuard.HawksMod.Listener.ChatListener;
 import io.github.HawkGuard.HawksMod.Overlays.Overlay;
+import io.github.HawkGuard.HawksMod.Overlays.SlayerOverlay;
 import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,14 +13,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 public class HawksMod {
     public static final String MODID = "HawksMod";
     public static final String VERSION = "0.0.1";
-    public static Overlay overlay;
+    public static SlayerOverlay slayerOverlay;
 
     //public ChatListener chatListener;
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new ChatListener());
-        MinecraftForge.EVENT_BUS.register(overlay = new Overlay());
+        MinecraftForge.EVENT_BUS.register(slayerOverlay = new SlayerOverlay());
         System.out.println("Dirt: " + Blocks.dirt.getUnlocalizedName());
     }
 }
