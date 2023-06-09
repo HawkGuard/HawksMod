@@ -14,8 +14,11 @@ import org.lwjgl.opengl.GL14;
 public abstract class Overlay {
     int height = Minecraft.getMinecraft().displayHeight;
     int width = Minecraft.getMinecraft().displayWidth;
-    private String text;
+    public String text;
+
+    public Minecraft minecraft;
     public Overlay(){
+        this.minecraft = Minecraft.getMinecraft();
         this.text = "vide";
     }
     @SubscribeEvent
@@ -28,10 +31,7 @@ public abstract class Overlay {
         //fRender.drawString(EnumChatFormatting.RED + text, 5, 5, 0);
     }
 
-    private void render(){
-        FontRenderer fRender = Minecraft.getMinecraft().fontRendererObj;
-        fRender.drawString(EnumChatFormatting.RED + text, 5, 5, 0);
-    }
+    public abstract void render();
 
     public void setText(String text){
         this.text = text;

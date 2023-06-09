@@ -13,19 +13,19 @@ public class SlayerUtils {
     public static String getRevenantLoot(){
         String lootTable;
 
-        lootTable = "Revenant Flesh" +
-                "Foul Flesh" +
-                "Pestilence Rune" +
-                "Undead Catalyst" +
-                "Smite VI Book" +
-                "Beheaded Horror" +
-                "Revenant Catalyst" +
-                "Snake Rune" +
-                "Revenant Viscera" +
-                "Scythe Blade" +
-                "Shard Of The Shredded" +
-                "Smite VII Book" +
-                "Warden Heart";
+        lootTable = "Revenant Flesh \n" +
+                "Foul Flesh \n" +
+                "Pestilence Rune \n" +
+                "Undead Catalyst \n" +
+                "Smite VI Book \n" +
+                "Beheaded Horror \n" +
+                "Revenant Catalyst \n" +
+                "Snake Rune \n" +
+                "Revenant Viscera \n" +
+                "Scythe Blade \n" +
+                "Shard Of The Shredded \n" +
+                "Smite VII Book \n" +
+                "Warden Heart \n";
 
         return lootTable;
     }
